@@ -6,8 +6,7 @@ import { format, addDays, startOfWeek } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const mealTypes = ['Breakfast', 'Lunch', 'Dinner'];
 
 function generateWeekDays(startDate) {

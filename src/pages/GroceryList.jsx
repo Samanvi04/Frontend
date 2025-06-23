@@ -5,8 +5,7 @@ import axios from 'axios';
 import { format, startOfWeek, addDays } from 'date-fns';
 import { jsPDF } from 'jspdf';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 export default function GroceryList() {
   const { token } = useSelector((state) => state.auth);
   const [groceryList, setGroceryList] = useState([]);

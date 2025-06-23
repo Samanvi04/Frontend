@@ -4,8 +4,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const dietaryOptions = ['vegan', 'vegetarian', 'keto', 'gluten-free', 'paleo', 'dairy-free'];
 const cuisines = ['italian', 'mexican', 'indian', 'chinese', 'american', 'french'];
 
